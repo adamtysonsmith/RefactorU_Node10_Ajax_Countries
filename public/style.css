@@ -1,0 +1,13 @@
+.title {
+    float: left;
+}
+
+.inputs {
+    float: left;
+    margin-top: 100px;
+}
+
+.countries {
+    clear: left;
+    padding-top: 30px;
+}

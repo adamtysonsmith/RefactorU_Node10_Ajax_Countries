@@ -1,7 +1,17 @@
 extends layout
 
 block content
-    h1 Hello Boulder!
-    button.load Load Countries
+    div.title
+        h1 ALL THE COUNTRIES!!!!!
+        img(src="/img/all-the-things.jpg" width="350px")
+    
+    div.inputs
+        p Search for a Country
+        form(id="search-form")
+            input(name="searchText" id="search-text" type="text")
+            input(name="searchButton" id="search-button" type="submit")
+        br  
+        p Load All the Countries
+        button.load Load Countries
     
     div.countries
