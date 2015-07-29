@@ -13,7 +13,7 @@ $(document).ready(function(){
     }
     
     
-    $('.load').on('click', function(){
+    $('#load-button').on('click', function() {
         $.ajax({
             method: 'GET',
             url: '/countries',
@@ -22,17 +22,17 @@ $(document).ready(function(){
     });
     
     $('#search-button').on('click', function(evt){
-        
         // Store the query text in an object
         var query = {
             query: $('#search-text').val()
         }
         
-        // Post accepts URL, Data, and Success
-        $.post('/search', query, function(result){
-            console.log(result);
-            getCountries(result);
+        $.ajax({
+            method: 'POST',
+            url: '/search',
+            data: query,
+            success: getCountries // Receives the data from the res.send
         });
-        
     });
+    
 }); // End Ready
